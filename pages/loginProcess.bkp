@@ -1,0 +1,34 @@
+<?php
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $username = trim($_REQUEST['username']);
+        $password = trim($_REQUEST['password']);
+        $success = true;
+        if(empty($username)){
+            echo 'Type a username';
+            $success = false;
+        } else if(empty($password)){
+            echo 'Password cann not be empty';
+            $success = false;
+        } 
+        if($success){
+            $sql = "SELECT password FROM users WHERE username='$username'";
+            $result = $conn -> query($sql);
+            if($result->num_rows > 0){
+                $row = $result->fetch_assoc();
+                if($row["password"] == $password){
+                    $_SESSION["loggedUser"] = $username;
+                    $password = "";
+                    $msg = "Session started for " . $username;
+                    echo "<script>closeLogin(0)</script>";
+
+                }else{
+                    $msg = "Incorrect password for " . $username;
+ 
+                };
+            }else{
+                echo 'Username not found';
+            }
+        }
+    }
+?>
+

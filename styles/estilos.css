@@ -1,0 +1,374 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+:root{
+    --myBlueGray: #537c8d;
+    --myBei: #A59787;
+    --myBlack: rgb(28, 28, 25);
+    --myLaiGrey: rgb(202, 202, 203);
+    --myMorado: rgb(198, 144, 248);
+    --myGray: rgb(82, 83, 83);
+    --myBlue: rgb(155, 229, 254);
+    --myRed: rgb(246, 142, 142); 
+}
+button:hover{
+    cursor: pointer;
+}
+.pad10{
+    padding: 10px;
+}
+.flexAllCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-acenter{
+    display: flex;
+    align-items: center;
+}
+h1, h2, h3, h4{
+    font-family: 'Dancing Script', cursive;
+}
+header {
+    justify-content: center;
+    position: relative;
+}
+.blackPluses{
+    background:
+    conic-gradient(at 10% 50%,#0000 75%,#000000 0),
+    conic-gradient(at 10% 50%,#0000 75%,#000000 0) calc(1*32px) calc(3*32px),
+    conic-gradient(at 10% 50%,#0000 75%,#000000 0) calc(2*32px) calc(1*32px),
+    conic-gradient(at 10% 50%,#0000 75%,#000000 0) calc(3*32px) calc(4*32px),
+    conic-gradient(at 10% 50%,#0000 75%,#000000 0) calc(4*32px) calc(2*32px),
+    conic-gradient(at 50% 10%,#0000 75%,#000000 0) 0 calc(4*32px),
+    conic-gradient(at 50% 10%,#0000 75%,#000000 0) calc(1*32px) calc(2*32px),
+    conic-gradient(at 50% 10%,#0000 75%,#000000 0) calc(2*32px) 0,
+    conic-gradient(at 50% 10%,#0000 75%,#000000 0) calc(3*32px) calc(3*32px),
+    conic-gradient(at 50% 10%,#0000 75%,#000000 0) calc(4*32px) calc(1*32px),
+    #060909;
+    background-size: 160px 160px;
+}
+.headerContainer{
+    width: 90%;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    cursor: pointer;
+}
+.ws {
+    width: 15%;
+    justify-content: right;
+}
+.ws .tlf{
+    padding: 5px;
+}
+.logoBar a, .logoBar .labor{
+    padding: 0 7px;
+}
+.horario{
+    width: 15%;
+    justify-content: right;
+}
+.horario .labor::first-line {
+    font-size: 16px;
+}
+
+.horario .labor span:last-child {
+    color: gray;
+    font-size: 12px;
+}
+
+.logoBar {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--myBlack);
+    padding: 10px 0;
+}
+
+.logo {
+    width: 70%;
+}
+
+li {
+    display: inline;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+}
+
+li a {
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+
+    background-color: none;
+    border: 1px solid var(--myBlueGray);
+    transition: all 0.3s ease-in-out;
+}
+
+nav {
+    height: 60px;
+    justify-content: space-between;
+}
+.loginLink{
+    padding-left: 20px;
+}
+
+.loginLink:hover{
+    color: var(--myBlueGray);
+    transition: all 0.3s ease-in;
+}
+.abtn {
+    font-size: 14px;
+    padding: 10px 25px;
+    border: 1px solid darkslategray;
+    border-radius: 25px;
+    color: white;
+}
+.abtn:hover{
+    color: var(--myBlueGray);
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+    background-color: #070a0a;
+}
+main{
+    height: 500px;
+    background-image: url("https://images.pexels.com/photos/5320162/pexels-photo-5320162.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+main h1{
+    font-size: 60px;
+}
+main h4{
+    padding-bottom: 60px;
+    color: white;
+    font-family: 'Roboto';
+}
+
+.formContainer{
+/*
+    background:
+      conic-gradient(at 10% 50%,#0000 75%,#ffffff 0),
+      conic-gradient(at 10% 50%,#0000 75%,#ffffff 0) calc(1*32px) calc(3*32px),
+      conic-gradient(at 10% 50%,#0000 75%,#ffffff 0) calc(2*32px) calc(1*32px),
+      conic-gradient(at 10% 50%,#0000 75%,#ffffff 0) calc(3*32px) calc(4*32px),
+      conic-gradient(at 10% 50%,#0000 75%,#ffffff 0) calc(4*32px) calc(2*32px),
+      conic-gradient(at 50% 10%,#0000 75%,#ffffff 0) 0 calc(4*32px),
+      conic-gradient(at 50% 10%,#0000 75%,#ffffff 0) calc(1*32px) calc(2*32px),
+      conic-gradient(at 50% 10%,#0000 75%,#ffffff 0) calc(2*32px) 0,
+      conic-gradient(at 50% 10%,#0000 75%,#ffffff 0) calc(3*32px) calc(3*32px),
+      conic-gradient(at 50% 10%,#0000 75%,#ffffff 0) calc(4*32px) calc(1*32px),
+      #f7f7f7;
+background-size: 160px 160px;*/
+    background-image: url("../images/formImage.jpg");
+    background-size: cover;
+    justify-content: center;
+    
+}
+.wrapperForm{
+    width: 60%;
+    background-color: rgba(0, 0, 0, .5);
+}
+.formInputs form{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.formInputs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.wrapperForm .formInputs{
+   justify-content: center;
+   padding: 40px 0;
+}
+.formInputs h1{
+    font-family: 'Roboto';
+    padding-bottom: 30px;
+    color: #fff;
+    font-size: 30px;
+}
+input, select{
+    background: transparent;
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid var(--myBlueGray);
+    width: 100%;
+    font-size: 16px;
+    padding: 5px 10px;
+    color: var(--myBei)
+}
+/*
+form div{
+    padding: 12px;
+}*/
+.horarioInputs{
+    justify-content: center;
+ }
+.horarioInputs div{
+    padding: 5px 2px;
+}
+
+.formImg{
+    /*background-image: url("../images/img_recent_work-03.jpg");*/
+    height: 550px;
+    width: 800px;
+    justify-content: center;
+    text-align: center;
+}
+.formImg h1{
+    font-size: 70px;
+
+}
+nav a, span, h1{
+    color: white;
+}
+.gallery{
+    background: rgb(38,39,40);
+    background: linear-gradient(0deg, rgb(20, 20, 20) 0%, rgb(34, 47, 52) 35%, rgb(20, 40, 44) 100%);
+    flex-direction: column;
+    align-content: center;
+    padding: 60px;
+}
+.cardContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 420px;
+    grid-gap: 20px;
+    margin-top: 60PX;
+}
+.card, .cardArtist{
+    border: 1px solid lightgray;
+    border-radius:5px; 
+    width:300px;
+}
+h3{
+    color: white;
+}
+.cardImg img{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    border-radius:5px; 
+}
+.detailsImg{
+    padding: 10px;
+}
+.cardArtist h3, .cardArtist span, .artists h1{
+    color: black;
+}
+.artists{
+    flex-direction: column;
+    align-content: center;
+    padding: 60px;
+    background:
+    conic-gradient(at 10% 50%,#0000 75%,#ffffff 0),
+    conic-gradient(at 10% 50%,#0000 75%,#ffffff 0) calc(1*32px) calc(3*32px),
+    conic-gradient(at 10% 50%,#0000 75%,#ffffff 0) calc(2*32px) calc(1*32px),
+    conic-gradient(at 10% 50%,#0000 75%,#ffffff 0) calc(3*32px) calc(4*32px),
+    conic-gradient(at 10% 50%,#0000 75%,#ffffff 0) calc(4*32px) calc(2*32px),
+    conic-gradient(at 50% 10%,#0000 75%,#ffffff 0) 0 calc(4*32px),
+    conic-gradient(at 50% 10%,#0000 75%,#ffffff 0) calc(1*32px) calc(2*32px),
+    conic-gradient(at 50% 10%,#0000 75%,#ffffff 0) calc(2*32px) 0,
+    conic-gradient(at 50% 10%,#0000 75%,#ffffff 0) calc(3*32px) calc(3*32px),
+    conic-gradient(at 50% 10%,#0000 75%,#ffffff 0) calc(4*32px) calc(1*32px),
+    #f6f9fb;
+    background-size: 160px 160px;
+}
+.footer{
+    padding: 60px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.footer * {
+    color: white;
+}
+.footer div{
+    flex-grow: 1;
+}
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.rrss i{
+    padding: 0 10px;
+}
+.gotoup{
+    text-align: right;
+    padding: 10px 30px;
+}
+.gotoup a{
+    color: var(--myBlueGray);
+}
+.gotoup a:hover{
+    transition: all 0.2s ease-in;
+    color: #fff;
+}
+.login{
+    position: absolute;
+    right: 0;
+    padding: 25px 20px;
+    background-color: rgba(20, 20, 20, .6);
+    width: 300px;
+    border-bottom-left-radius: 25px;
+}
+.login form{
+    padding-top: 30px;
+}
+.login button{
+    margin-top: 30px;
+    margin-bottom: 0px;
+    background-color: #A59787;
+    color: #060909;
+}
+
+.login *{
+    color: var(--myBei);
+    text-align: center;
+}
+.show{
+    display: inline;
+}
+.hide{
+    display: none;
+}
+#loginMsgContainer{
+    background-color:var(--myRed); 
+    display: flex; 
+    justify-content: right;
+    align-items: center;
+}
+#loginMsgContainer:hover{
+    cursor: pointer;
+}
+#closeMsg{
+    border-left: 1px solid salmon; 
+    padding: 5px 10px;
+}
+
